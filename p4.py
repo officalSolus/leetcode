@@ -1,7 +1,7 @@
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         if len(nums1) > len(nums2):
-            nums1,nums = nums2,nums1
+            nums1,nums2 = nums2,nums1
 
         
         A,B = nums1, nums2
@@ -13,7 +13,7 @@ class Solution:
         while low<=high:
 
             cutA = (low+high)//2
-            cutB = (m+n+1)//2 - cutA
+            cutB = (m+n+1)//2 -cutA
 
 
             leftA = float('-inf') if cutA==0 else A[cutA-1]
