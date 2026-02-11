@@ -12,4 +12,3 @@ class Solution:
         else:
             return 0
         
-print(Solution().reverse(-123))

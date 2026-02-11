@@ -25,4 +25,4 @@ class Solution:
                 final = substr
         return final
 
-print(Solution().longestPalindrome("bb"))
+

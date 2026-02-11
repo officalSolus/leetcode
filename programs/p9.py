@@ -13,4 +13,3 @@ class Solution:
                 return False
         else:
             return False
-print(Solution().isPalindrome(121))

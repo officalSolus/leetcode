@@ -53,5 +53,3 @@ class Solution:
 
 #         return ''.join(res)
 
-
-print(Solution().intToRoman(1994))
