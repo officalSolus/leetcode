@@ -1,42 +1,28 @@
 class Solution:
     def myAtoi(self, s: str) -> int:
-        sign = 0
-        ans= 0
-        digitFound = False
-        letterFound = False
-        signUsed = False
-
-        prev = ''
-        for x in s:
-            if x==" " and digitFound == False and not signUsed: 
-                pass
-            elif (x == '+' or x == '-') and not digitFound and not signUsed:
-                signUsed = True
-                if x == '-':
-                    sign = 1
-            elif digitFound == True:
-                try:
-                    z = int(x)
-                    ans =ans*10+z
-                except:
-                    break
-            elif digitFound == False:
-                try:
-                    z = int(x)
-                    ans =ans*10+z
-                    digitFound = True
-                except:
-                    letterFound = True
-                    break
-            prev = x
-        if sign == 1:
-            ans = -1*ans
+        s = s.lstrip()
         
-        if -2**31<= ans <=2**31 - 1:
-            return ans
-        else:
-            if str(ans)[0] == '-':
-                return -2**31
-            else:
-                return 2**31 -1 
-    
+        if not s:
+            return 0
+            
+        sign = 1
+        i = 0
+        if s[0] == '-':
+            sign = -1
+            i += 1
+        elif s[0] == '+':
+            i += 1
+            
+        result = 0
+        INT_MAX = 2**31 - 1
+        INT_MIN = -2**31
+        
+        while i < len(s) and s[i].isdigit():
+            digit = int(s[i])
+            if result > (INT_MAX - digit) // 10:
+                return INT_MAX if sign == 1 else INT_MIN
+                
+            result = result * 10 + digit
+            i += 1
+            
+        return sign * result

@@ -8,30 +8,37 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "Hash Table",
+      "query": "tag:#concepts",
       "color": {
         "a": 1,
-        "rgb": 14701138
+        "rgb": 15400960
       }
     },
     {
-      "query": "",
+      "query": "questions",
       "color": {
         "a": 1,
-        "rgb": 14725458
+        "rgb": 0
+      }
+    },
+    {
+      "query": "genric",
+      "color": {
+        "a": 1,
+        "rgb": 4140677
       }
     }
   ],
-  "collapse-display": true,
+  "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
   "collapse-forces": false,
-  "centerStrength": 1,
+  "centerStrength": 0,
   "repelStrength": 0,
-  "linkStrength": 0,
+  "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 1.5,
+  "scale": 1.4999999999999902,
   "close": true
 }
